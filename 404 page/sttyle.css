@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Gilda+Display);
+
+html {
+  background: #111;
+  color: white;
+  overflow: hidden;
+  height: 100%;
+  user-select: none;
+}
+
+.error {
+  text-align: center;
+  font-family: 'Trump Gothic East', serif;
+  font-size: 175px;
+  text-align: center;
+  width: 175px;
+  height: 150px;
+  line-height: 150px;
+  margin: auto;
+  position: absolute;
+  top: -80px;
+  bottom: 0;
+  left: -30px;
+  right: 0;
+  animation: animate 2s linear infinite;
+  overflow: default;
+}
+
+.info {
+  text-align: center;
+  font-family: 'Gilda Display', serif;
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  margin: auto;
+  position: absolute;
+  top: 140px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+   white-space: nowrap;
+   overflow: hidden; 
+   border-right: solid 3px #fff;
+  animation: animated-text 2s steps(25) 1s 1 normal both, animated-cursor 500ms steps(25) infinite;
+}
+
+
+
+img{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: -1;
+   opacity: .5;
+}
+
+@keyframes animate {
+  0%, 100% {
+    text-shadow: -2.5px -2.5px 0 #0ff, 2.5px 2.5px 0 #f00;
+    border: -2.5px -2.5px 0 #0ff, 2.5px 2.5px 0 #f00;
+  }
+  25% {
+    text-shadow: 2.5px 2.5px 0 #0ff, -2.5px -2.5px 0 #f00;
+    border: -2.5px -2.5px 0 #0ff, 2.5px 2.5px 0 #f00;
+  }
+  50% {
+    text-shadow: 2.5px -2.5px 0 #0ff, -2.5px 2.5px 0 #f00;
+    border: -2.5px -2.5px 0 #0ff, 2.5px 2.5px 0 #f00;
+  }
+  75% {
+    text-shadow: -2.5px 2.5px 0 #0ff, 2.5px -2.5px 0 #f00;
+    border: -2.5px -2.5px 0 #0ff, 2.5px 2.5px 0 #f00;
+  }
+}
+
+/* Animation type */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 120px;}
+}
+
+/* Animation cursor */
+
+@keyframes animated-cursor{
+  from{border-right-color: #fff;}
+  to{border-right-color: transparent;}
+}
